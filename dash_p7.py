@@ -61,6 +61,11 @@ def main():
     st.subheader("Score du client")
     st.write(round(score*100,2),"%")
 
+    if score < 0.5:
+        st.write("CREDIT ACCORDE")
+    else:
+        st.write("CREDIT NON ACCORDE")
+
     fig = go.Figure(go.Indicator(
         domain = {'x': [0, 1], 'y': [0, 1]},
         value = score,
