@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 
 
 PORT = os.environ.get('PORT', 5000)
-FLASK_URL = "http://127.0.0.1:5000/app"
+FLASK_URL = "http://0.0.0.0:5000/app"
 ##
 model = pickle.load(open('xgb_classif.pkl', 'rb'))
 X_test = pickle.load(open('data_md.pkl', 'rb'))

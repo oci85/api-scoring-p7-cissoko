@@ -13,9 +13,6 @@ X_t = X_test.drop(columns=['TARGET'])
 y_t = X_test['TARGET']
 
 app = Flask(__name__)
-@app.route('/favicon.ico')
-def favicon():
-    return 'dummy', 200
 
 @app.route('/')
 def home():
@@ -124,5 +121,5 @@ def feature_importance():
 if __name__ == "__main__":
     import os
     PORT = os.environ.get('PORT', 5000)
-    app.run(port=PORT)
+    app.run(host = '0.0.0.0', port=PORT)
 # app.run(host="localhost", port=5000, debug=True)
